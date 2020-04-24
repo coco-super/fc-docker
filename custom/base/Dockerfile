@@ -33,7 +33,6 @@ RUN apt-get update && apt-get --no-install-recommends  install -y apt-utils ca-c
         build-essential=12.3 \
     && rm -r /var/lib/apt/lists/*
 
-
 # Generate usernames
 RUN for i in $(seq 10000 10999); do \
         echo "user$i:x:$i:$i::/tmp:/usr/sbin/nologin" >> /etc/passwd; \
